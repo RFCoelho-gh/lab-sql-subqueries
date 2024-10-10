@@ -3,13 +3,13 @@ USE sakila;
 # Task 1
 # Determine the number of copies of the film "Hunchback Impossible" that exist in the inventory system.
 
-SELECT first_name
-FROM actor
-WHERE actor_id IN (SELECT actor_id
-					FROM film_actor AS fa
-					WHERE film_id = (SELECT film_id ## instead of IN (1,2,3)
-									FROM film AS f
-									WHERE title = "FORWARD TEMPLE")); ## instead of 2
+#SELECT first_name
+#FROM actor
+#WHERE actor_id IN (SELECT actor_id
+#					FROM film_actor AS fa
+#					WHERE film_id = (SELECT film_id ## instead of IN (1,2,3)
+#									FROM film AS f
+#									WHERE title = "FORWARD TEMPLE")); ## instead of 2
 
 
 SELECT COUNT(inventory_id) as amount
